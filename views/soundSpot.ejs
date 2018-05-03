@@ -108,10 +108,10 @@
 							<th>Votes</th>
 							<th></th>
 						</tr>
-						<% Spot.playlist.sort((a, b)=> {
+						<% Spot[0].playlist.sort((a, b)=> {
 							return b.votes - a.votes;
 						})%>
-						<% Spot.playlist.forEach((element, index)=>{%>
+						<% Spot[0].playlist.forEach((element, index)=>{%>
 						<form action="addVote" method="POST">
 						<tr>
 						<td>
