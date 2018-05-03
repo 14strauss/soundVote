@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sound Vote</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+	<link rel="icon" href="soundVote.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<script type="text/javascript" src="./app.js"></script>
+	<!--<script type="text/javascript" src="code.ejs"></script>-->
+
+</head>
+<body>
+		<!-- nav bar class will dispay a collapsable bar of pages -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<div class="container">
+	  <!-- fa class is a font awesome icon provider from the above link to font awesome -->
+	  <a class="navbar-brand"><span class="fa fa-music"></span> Sound Vote</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item ">
+	      	
+	      		<!-- active defines which page title is hilighted -->
+	        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="soundSpot">Sound Spots</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="about">About</a>
+	      </li>
+	     <% if(currentUser){ %>
+	      <li class="nav-item">
+	        <a class="nav-link" href="map">Map</a>
+	      </li> <% } %>
+	    </ul>
+	    <ul class="navbar-nav navbar-right">
+	    <%	if(!currentUser){ %>
+	    	<li><a class="nav-link" href="signup">Sign Up <i class="fa fa-user-plus"></i></a></li>
+	      <li><a class="nav-link" href="login">Log In <i class="fa fa-user"></i></a></li>
+		<%	} else {	  %>  
+			<li><a href="#" >Signed in As <%= currentUser.username %></a> </li>
+	 		<li><a class="nav-link" href="logout">Logout <i class="fa fa-user-plus"></i></a></li>
+		<%	} %>
+	    </ul>
+	  </div>
+	</div>
+</nav>
+
+<!-- <div class="container"> -->
+	<!-- <div class="form-Row"> -->
+	
+
+	<div id="login-content">
+		<!-- from that will eventually send the submitted data to be cross refferenced with a database of user information -->
+			<form action="/login" method="POST">
+			    <label for="exampleInputEmail1">User Name</label>
+			    <input type="text" class="form-control" name="username" id="Email" aria-describedby="emailHelp" placeholder="Enter User Name">
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="Password" class="form-control" name="password" id="Password" placeholder="Password">
+			    	    
+			    
+				<input type="hidden" class="form-control" name="latitude" id="latitude">
+				<input type="hidden" class="form-control" name="longitude" id="longitude">
+					<!--<input type="hidden" class="form-control" name="coordinates" id="coordinates">-->
+			  </div>
+			  
+			  <button type="submit" class="btn btn-primary" >Login</button>
+			  <!--<button type="submit" class="btn btn-primary" onclick="getLocation()" >Login</button>-->
+			</form>
+			<p id="demo"></p>
+		<script>
+var x = document.getElementById("demo");
+var lat, long;
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(logPosition);
+       
+        
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";}
+    }
+    function logPosition(position) {
+     lat = position.coords.latitude;
+     long = position.coords.longitude;
+     
+     document.forms[0].latitude.value = lat;
+     document.forms[0].longitude.value = long;
+   
+    // console.log(lat,long);
+  //x.innerHTML="Latitude: " + position.coords.latitude + 
+  //   "<br>Longitude: " + position.coords.longitude;
+}
+// function showPosition(position) {
+//      x.innerHTML="Latitude: " + position.coords.latitude + 
+//      "<br>Longitude: " + position.coords.longitude;
+    
+// }
+window.onload=getLocation;
+</script>
+	</div>
+<!-- </div> -->
+	
+</div>
+<!-- this will have a company styled footer with links to details and to specific pages that would typically be in a footer -->
+
+<footer class="footer-wrap">
+	<div class="container">
+		
+	</div>
+</footer>
+
+
+<!-- this is source code to the java script neccessary to use boot strapping, and the bootstrapping needs to have the propper jquery link placed before the bootstrap link, because the jquery needs to be established before the bootstrap.  -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src=""> </script>
+</body>
+</html>
