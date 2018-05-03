@@ -47,10 +47,10 @@ app.get("/soundSpot", isLoggedIn, function(req, res){
         .select('playlist')
         .exec()
         .then(doc => {
-//             var doc2= JSON.stringify(doc);
-//             var spot= JSON.parse(doc2);
+            var doc2= JSON.stringify(doc);
+            var spot= JSON.parse(doc2);
              
-            res.render("soundSpot", {currentUser: req.user, Spot: doc, place1:place1, place2:place2, place3:place3});
+            res.render("soundSpot", {currentUser: req.user, Spot: spot, place1:place1, place2:place2, place3:place3});
             
           });
     });
