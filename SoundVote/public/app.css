@@ -1,0 +1,176 @@
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+body {
+	background: url("par1.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: white;
+}
+h1{
+	text-align: center;
+}
+.navbar-dark .navbar-brand {
+	color: black;
+}
+.navbar-dark .navbar-nav .nav-link {
+color: black;
+
+} 
+.navbar-dark .navbar-nav .nav-link:hover {
+
+background: gray;
+border-radius: 5px;
+} 
+
+  #map {
+        height: 60%;
+        width: 60%;
+        margin: 5% auto 0 auto;
+      }
+   .cont{
+   		display:flex;
+	justify-content: center;
+   	
+   }
+#about_content{
+	margin-top:5%;
+	margin-left: 5%;
+	margin-right:5%;
+	padding-bottom: 3px;
+	text-align: center;
+	font-weight: bolder;
+	border-radius: 15px;
+	background:rgba(190,190,190, .9);
+	color: black;
+}
+#signup-content{
+	margin-top:10%;
+	margin-left: 25%;
+	margin-right:25%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: center;
+	font-weight: bolder;
+	border-radius: 15px;
+	background:rgba(190,190,190, .9);
+	color: black;
+}
+#login-content{
+	margin-top:10%;
+	margin-left: 30%;
+	margin-right:30%;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: center;
+	font-weight: bolder;
+	border-radius: 15px;
+	background:rgba(190,190,190, .9);
+	color: black;
+}
+#content{
+	margin-top:25%;
+	margin-left: 25%;
+	margin-right:25%;
+	padding-bottom: 3px;
+	text-align: center;
+	font-weight: bolder;
+	border-radius: 15px;
+	background:rgba(190,190,190, .9);
+	color: black;
+}
+/*the width is what sizes the form to fit where it does*/
+
+.form-Row{
+	background-color:rgba(190,190,190, .9);
+	align-items: center;
+	text-align: center;
+	width: 40%;
+	margin-top: 10%;
+	margin-left:30%;
+	
+}
+/*the width is what sizes the form to fit where it does*/
+
+.form-stuff{
+	background-color: white;
+	align-items: center;
+	text-align: center;
+	width: 40%;
+	margin-top: 10%;
+	margin-left:30%;
+	/*color:white;*/
+}
+.form-control{
+	text-align: center;
+	align-items: center;
+	align-content: center
+}
+/*the width is what sizes the form to fit where it does*/
+.signup{
+	background-color: white;
+	align-items: center;
+	text-align: center;
+	width: 50%;
+	margin-top: 10%;
+	margin-left:25%;
+	/*color:white;*/
+}
+.stuff{
+	height: 200px;
+	/*width: 80%;*/
+	background-color: white;
+	margin-bottom: 10px;
+	color:black;
+	border-radius: 15px;
+	
+}
+.spot{
+    margin-top: 10%;
+    margin-right:0;
+    margin-left: 10%;
+	height: 80%;
+	/*width: 80%;*/
+	background-color: rgb(163, 172, 186);
+	margin-bottom: 10px;
+	color:black;
+	border-radius: 15px;
+	
+}
+.picture{
+
+	max-height: 80%;
+	max-width: 80%;
+	 display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+.buttonstyle{
+	
+	 display: block;
+	 margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.disconnectButton{
+	/*margin-left: 50%;*/
+	/*margin-top: 50%;*/
+}
+.centerdiv{
+		display:flex;
+	justify-content: center;
+
+}
+
+#playlist{
+	width: 100%;
+
+}
