@@ -91,7 +91,7 @@ app.post("/signup", function(req, res){
     req.body.zip
     req.body.latitude
     req.body.longitude
-    User.register(new User({username: req.body.username, address: req.body.address,  city: req.body.city, state: req.body.state, zip: req.body.zip, longitude:req.body.longitude, latitude: req.body.latitude}), req.body.password, function(err, user){
+    User.register(new User({username: req.body.username,votes:10, address: req.body.address,  city: req.body.city, state: req.body.state, zip: req.body.zip, longitude:req.body.longitude, latitude: req.body.latitude}), req.body.password, function(err, user){
        if(err){
        console.log(err);
        return res.render('signup');
